@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+    <style>
+        .button {
+  outline: 0;
+  border: 0;
+  padding: 1em 3.5em;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ffb74d;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    display: block;
+  }
+  .modal-close {
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 5px;
+    color: #444;
+    background-color: #fff;
+  }
+}
+
+.is-hide {
+  display: none;
+}
+
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 折叠（Collapse）插件事件</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style>
+password {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 50px;  
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+  outline: 0;
+}
+
+button {
+  position: absolute;
+  height: 100%; width: 50px;
+  top: 0; right: 0;
+  background: #424242;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+button::before,
+button::after {
+  content:'';
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+}
+
+
+/* Eye open */
+input[type='password'] + button::before {
+  width: 20px;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 15px 0 15px 0;
+  transform: rotate(45deg);
+  transition: height .168s;
+}
+
+/* Pupil open */
+input[type='password'] + button::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #424242;
+}
+
+/* Eye closed  */
+input[type='text'] + button::before {
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 3px solid #e0e0e0;
+  border-radius: 15px 0 15px 0;
+  transform: rotate(45deg);
+}
+
+/* Pupil closed */
+input[type='text'] + button::after {
+  width: 3px;
+  height: 30px;
+  border-radius: 0;
+  transform: rotate(30deg);
+  background: #e0e0e0;
+  transition: height .132s;
+}
+
+
+/* Demo Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #212121;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #fff;
+  font-family: helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 36px;
+}
+    </style>
+</head>
+<body>
+
+<h1>Peeky Password</h1>
+<password>
+  <input type="password" placeholder="Password" value="Password123">
+  <button></button>
+</password>
+<script src="https://code.angularjs.org/1.2.13/angular.min.js"></script>
+<script type="text/javascript">
+$('button').on('click', function() {
+  var $inp = $('input');  
+  $inp.attr('type') === 'password' ? 
+    $inp.attr('type', 'text') 
+  : $inp.attr('type', 'password')
+});
+</script> 
+
+
+</body>
+</html>
+</body>
+
+</html>

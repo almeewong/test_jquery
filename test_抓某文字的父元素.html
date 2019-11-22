@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+
+    <style>
+        .demo {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filter-wrap">
+        <ul class="filter">
+            <li class="active"><a role="button" class="btn btn-info mgb10"><i class="fa fa-tags"></i>全部問題</a></li>
+            <li><a data-filter=".hot" role="button" class="btn btn-info mgb10" name="car"> <i class="fa fa-tag"></i> 熱門</a></li>
+            <li><a data-filter=".faqTag_4" role="button" class="btn btn-info mgb10"> <i class="fa fa-tag"></i>帳號</a></li>
+            <li><a data-filter=".faqTag_9" role="button" class="btn btn-info mgb10"> <i class="fa fa-tag"></i>儲值</a></li>
+            <li><a data-filter=".faqTag_14" role="button" class="btn btn-info mgb10"> <i class="fa fa-tag"></i>BUG</a></li>
+            <li><a data-filter=".faqTag_11" role="button" class="btn btn-info mgb10"> <i class="fa fa-tag"></i>設備</a></li>
+            <li><a data-filter=".faqTag_13" role="button" class="btn btn-info mgb10"> <i class="fa fa-tag"></i>平台</a></li>
+            <li><a data-filter=".faqTag_12" role="button" class="btn btn-info mgb10"> <i class="fa fa-tag"></i>外掛</a></li>
+            <li><a data-filter=".faqTag_10" role="button" class="btn btn-info mgb10"> <i class="fa fa-tag"></i>活動</a></li>
+        </ul>
+    </div>
+
+    <form>
+        喜歡的水果 : <br>
+        <input type="checkbox" name="fruit" value="蘋果" checked>蘋果
+        <input type="checkbox" name="fruit" value="香蕉">香蕉
+        <input type="checkbox" name="fruit" value="櫻桃">櫻桃<br>
+        <input type="button" value="確定" onclick="check(this.form)">
+    </form>
+    <script>
+        /*var t =[];*/
+        var t = $('.active').children('li a').text();
+        console.log(t[1]);
+        var q = $('.active').children('li a').attr('data-filter');
+        console.log(q);
+        var r = $('.filter .active').children('li a').attr('data-filter');
+        console.log(r);
+        /*
+        function fil{
+            var a1 = $("ul.filter li a:eq(1)").attr("data-filter");
+            var selectedfil = [];
+            for (var i = 0; i < fil.length; i++){
+                
+            }
+        }*/
+        
+     /*   function ggg{
+            var aaa = $("ul.filter li a").attr("data-filter");
+            var bbb = [];
+            for (var i = 0; i < aaa.length; i++){
+                bbb.push(aaa[i].value);
+            }
+            console.log(bbb.join());
+        }*/
+        
+        console.log($("ul.filter li a:eq(1)").attr("data-filter"));
+        
+        t === 'content' ?
+            $('.demo').children().hide() :
+            $('.demo').children().show()
+
+
+
+
+        function getfil(dfil) {
+            var fil = $('.filter').children('li a').attr('data-filter');
+            var selectedfil = [];
+            for (var i = 0; i < fil.length; i++) {
+                selectedfil.push(fil[i].value);
+            }
+            console.log("您喜歡的水果 : " + selectedfil.join());
+        }
+
+        var colors = ['red', 'green', 'blue'];
+        for (var i = 0; i < colors.length; i++) {
+            console.log(colors[i]);
+        }
+
+        function check(formObj) {
+            var obj = formObj.fruit;
+            var selected = [];
+            for (var i = 0; i < obj.length; i++) {
+                if (obj[i].checked) {
+                    selected.push(obj[i].value);
+                }
+            }
+            alert("您喜歡的水果 : " + selected.join());
+        }
+    </script>
+
+</body></html>

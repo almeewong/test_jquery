@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+
+    <style>
+        .p03 {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p03">
+        <div class="not">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolorum ipsum provident voluptatibus vitae mollitia voluptate dolore quo perferendis nobis minima, labore voluptas corporis tenetur, alias, tempore sequi iusto dolor.
+        </div>
+    </div>
+    <div class="demo"></div>
+
+    <script>
+        var ifnot = [];
+            var finish = "finish";
+            var $that = $(".p03").children().attr("class");
+            $that === 'not' ?
+            ifnot[0] = "not" : ifnot[0] = "finish";
+            console.log(ifnot[0]);
+        
+        function test() {
+            var $that = $(".p03").children().attr("class");
+            return $that === 'not';
+        }
+        console.log(test());  //第一種抓取function寫法
+        
+        var demo1 =  function test() {
+            var $that = $(".p03").children().attr("class");
+            return $that === 'not';
+        }
+        console.log(demo1()); //第二種抓取function寫法
+        
+     
+        
+       /*  var ifnot = [];
+            var finish = "finish";
+            var $that = $(".p03").children().attr("class");
+            $that === 'not' ?
+            ifnot[0] = "not" : ifnot[0] = "finish";
+            console.log(ifnot[0]); */
+        
+     /*   function demo1(){
+            return 
+        } */
+     /*   var x = myFunction(4, 3); // 调用函数，将返回值赋予 x 变量
+
+        function myFunction(a, b) {
+            return a * b; // 函数返回 a 和 b 的乘积
+        }
+        console.log(x);*/
+    </script>
+</body></html>

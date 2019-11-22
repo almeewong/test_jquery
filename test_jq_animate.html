@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+    
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            position:absolute;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                var box=$(".box");
+               box.animate({height:'300px',opacity:'0.4'},"slow");
+    box.animate({width:'300px',opacity:'0.8'},"slow");
+    box.animate({height:'100px',opacity:'0.4'},"slow");
+    box.animate({width:'100px',opacity:'0.8'},"slow");
+            });
+        })
+    </script>
+    
+</head>
+<body>
+    <button>開始</button>
+    <div class="box"></div>
+</body>
+</html>

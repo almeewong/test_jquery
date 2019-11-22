@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+
+    <style>
+        .section {
+            position: relative;
+            width: 100%;
+            height: 1000px;
+        }
+
+        #sec01 {
+            background: purple;
+        }
+
+        #sec02 {
+            background: pink;
+        }
+
+        #sec03 {
+            background: lightblue;
+        }
+    </style>
+    <script>
+        /*測試區塊*/
+        $(function(){
+            $('.menu').on('click',function(){
+            console.log("ha"+$(this).data('content'));
+                      alert("haha");
+        })
+        })
+        console.log($(this).data('content'));
+        
+        /*滾軸功能區塊*/
+        $(function(){
+            $('.menu').on('click',function(){
+                var gothere = "#sec"+$(this).data('content');//抓取點擊物件的自定義data值，並在前方加上#sec運用於下方滑動區塊要移動到的區塊的ID
+                $('html,body').animate({scrollTop:$(gothere).offset().top},500);
+                console.log(gothere);
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+            <div class="menu" data-content="01">SEC01</div>
+            <div class="menu" data-content="02">SEC02</div>
+            <div class="menu" data-content="03">SEC03</div>
+
+    <div class="section" id="sec01" data-content="01"></div>
+    <div class="section" id="sec02"></div>
+    <div class="section" id="sec03"></div>
+</body></html>

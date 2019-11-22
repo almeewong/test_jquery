@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+    
+    <style>
+    .section{
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+    #sec01{
+        background: purple;
+    }
+    #sec02{
+        background: pink;
+    }
+    #sec03{
+        background:lightblue;
+    }
+</style>
+    <script>
+        $(document).ready(function(){
+    $(function(){ $('#menu03').click(function(){ 
+        $('html,body').animate({scrollTop:$('#sec03').offset().top}, 500);});  
+    }); 
+}); 
+    </script>
+    
+</head>
+<body>
+    <div class="menu">
+    <ul>
+        <li id="menu01">SEC01</li>
+        <li id="menu02">SEC02</li>
+        <li id="menu03">SEC03</li>
+    </ul>
+</div>
+<div class="section" id="sec01"></div>
+<div class="section" id="sec02"></div>
+<div class="section" id="sec03"></div>
+</body>
+
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+    
+    <style>
+        .content1{
+            width: 500px;
+            text-align: center;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+    <script>
+        //btn = $("button");
+        $(function(){
+          $("button").click(function(){
+              $(".content1").toggleClass("red");
+          })  ;
+        });
+        
+    </script>
+</head>
+<body>
+    <button>click</button>
+    <div class="content1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tempore esse unde ducimus iusto, error hic tenetur voluptates repellendus expedita quisquam laudantium maxime aperiam at placeat dicta, rem, ratione magnam?</p></div>
+</body>
+</html>
